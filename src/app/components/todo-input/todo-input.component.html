@@ -1,0 +1,9 @@
+<form (ngSubmit)="submit()">
+      <input
+        [(ngModel)]="title"
+        name="title"
+        placeholder="What needs to be done?"
+        (keyup.enter)="submit()"
+        autofocus />
+      <button type="submit">Add</button>
+    </form>

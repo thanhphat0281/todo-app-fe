@@ -1,0 +1,13 @@
+<ul class="list" *ngIf="todos?.length; else empty">
+      <li *ngFor="let t of todos">
+        <app-todo-item
+          [todo]="t"
+          (toggle)="toggle.emit($event)"
+          (remove)="remove.emit($event)"
+          (updateTitle)="updateTitle.emit($event)">
+        </app-todo-item>
+      </li>
+    </ul>
+    <ng-template #empty>
+      <p class="empty">No todos yet. Add something! 🌱</p>
+    </ng-template>

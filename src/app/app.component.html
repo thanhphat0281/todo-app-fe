@@ -1,0 +1,36 @@
+<!-- <main class="container">
+      <h1>Angular Todo List</h1>
+
+      <app-todo-input (add)="addTodo($event)"></app-todo-input>
+
+      <app-filters
+        [filter]="filter()"
+        (filterChange)="setFilter($event)">
+      </app-filters>
+
+      <app-todo-list
+        [todos]="filteredTodos()"
+        (toggle)="toggleTodo($event)"
+        (remove)="removeTodo($event)"
+        (updateTitle)="updateTitle($event.id, $event.title)">
+      </app-todo-list>
+
+      <footer class="footer">
+        <span>{{ remainingCount() }} item(s) left</span>
+        <button class="clear" (click)="clearCompleted()" [disabled]="completedCount() === 0">
+          Clear completed ({{ completedCount() }})
+        </button>
+      </footer>
+    </main> -->
+
+    <main class="container">
+      <h1>Angular Todo List (API)</h1>
+      <app-todo-input (add)="addTodo($event)"></app-todo-input>
+      <app-filters [filter]="filter" (filterChange)="setFilter($event)"></app-filters>
+      <app-todo-list
+        [todos]="filteredTodos()"
+        (toggle)="toggleTodo($event)"
+        (remove)="removeTodo($event)"
+        (updateTitle)="updateTitle($event.id, $event.title)">
+      </app-todo-list>
+    </main>

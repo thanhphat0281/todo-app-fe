@@ -1,0 +1,14 @@
+<div class="filters">
+  <button [class.active]="filter === 'all'" (click)="onChange('all')">
+    All
+  </button>
+  <button [class.active]="filter === 'active'" (click)="onChange('active')">
+    Active
+  </button>
+  <button
+    [class.active]="filter === 'completed'"
+    (click)="onChange('completed')"
+  >
+    Completed
+  </button>
+</div>

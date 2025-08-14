@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}

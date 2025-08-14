@@ -1,0 +1,17 @@
+<div class="item" [class.done]="todo.completed">
+  <input
+    type="checkbox"
+    [checked]="todo.completed"
+    (change)="toggle.emit(todo!._id)"
+  />
+  <span *ngIf="!editing" class="title" (dblclick)="startEdit()">{{
+    todo.title
+  }}</span>
+  <input
+    *ngIf="editing"
+    [(ngModel)]="draft"
+    (keyup.enter)="save()"
+    (blur)="save()"
+  />
+  <button class="remove" (click)="remove.emit(todo!._id)">✕</button>
+</div>
