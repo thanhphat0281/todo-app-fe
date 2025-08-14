@@ -1,0 +1,6 @@
+{
+  "root": "dist/todo-standalone",
+  "routes": {
+    "/**": "index.html"
+  }
+}
